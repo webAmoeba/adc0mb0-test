@@ -1,18 +1,23 @@
-// @font-face {
-//   font-style: normal;
-//   font-weight: 400;
-//   font-family: "Rouble";
-
-//   font-display: swap;
-//   src:
-//     url("../fonts/rouble.woff2") format("woff2");
-// }
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
+  font-display: swap;
+}
 
 @font-face {
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
+  src: url("../fonts/Ubuntu-Regular.woff") format("woff");
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Ubuntu-Bold.woff") format("woff");
+  font-display: swap;
 }
