@@ -11,9 +11,9 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods, data-header)
     .container
-      button.header__toggle.btn-reset(type="button", aria-label="Меню", aria-pressed="false")
+      button.header__toggle.btn-reset(type="button", aria-label="Меню", aria-pressed="false", data-burger)
         span.visually-hidden Меню
       .header__wrapper
         a.header__logo(href="index.html", aria-label="Переход на главную")
@@ -26,12 +26,16 @@ mixin header(headerMods, currentUrl)
             "55",
             "Логотип."
           )
-          ul.header__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li
-                if(activeState)
-                  span.header__link.is-active= link.text
-                else
-                  a.header__link(href=link.href)= link.text
-          a.header__link.header__link--premiun
+        ul.header__list
+          li
+            a.header__link.header__link--user(href="#", data-close-menu) User
+          each link in headerLinks
+            - const activeState = currentUrl === link.href
+            li
+              if(activeState)
+                span.header__link.is-active= link.text
+              else
+                a.header__link(href=link.href, data-close-menu)= link.text
+      a.header__link.header__link--premium(href="#", data-close-menu)
+        span Premium
+        +icon('diamond', "20", "18")

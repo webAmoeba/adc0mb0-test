@@ -1,13 +1,56 @@
 .header {
-  padding: 28px 0;
+  min-height: 50px;
+  padding: 5px 0;
 
   background-color: $color-violet;
 
   .container {
+    position: relative;
+
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__toggle {
+    width: 40px;
+    height: 40px;
+
+    background: url("../../img/svg/menu-btn.svg") no-repeat center;
+    background-color: transparent;
+    border: none;
+  }
+
+  .header__wrapper {
+    display: none;
   }
 
   &__logo {
-    color: $color-default-white;
+    width: 114px;
+    height: 55px;
+
+    line-height: 0;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+
+    &--premium {
+      translate: 5px 0;
+
+      span {
+        @include visually-hidden;
+      }
+
+      svg {
+        width: 20px;
+        height: 18px;
+      }
+    }
+
   }
 }
