@@ -2,39 +2,36 @@ mixin header(headerMods, currentUrl)
   -
     const headerLinks = [
       {
-        href: "index.html",
-        text: "Главная"
+        href: "#",
+        text: "People nearbu"
       },
       {
         href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
+        text: "Search"
       },
     ]
 
   header.header(class=headerMods)
     .container
-      a.header__logo(href="index.html", aria-label="Переход на главную")
-        +picture(
-          'logo',
-          'Logo'
-          'png',
-          '114',
-          '55',
-          'Логотип.'
-        )
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
+      button.header__toggle.btn-reset(type="button", aria-label="Меню", aria-pressed="false")
+        span.visually-hidden Меню
+      .header__wrapper
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          span.visually-hidden На главную
+          +picture(
+            "logo",
+            "Logo",
+            "png",
+            "114",
+            "55",
+            "Логотип."
+          )
+          ul.header__list
             each link in headerLinks
               - const activeState = currentUrl === link.href
-              li.main-nav__item
+              li
                 if(activeState)
-                  span.main-nav__link.is-active= link.text
+                  span.header__link.is-active= link.text
                 else
-                  a.main-nav__link(href=link.href)= link.text
+                  a.header__link(href=link.href)= link.text
+          a.header__link.header__link--premiun
