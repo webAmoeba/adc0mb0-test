@@ -39,6 +39,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 img,
 video {
   display: block;
@@ -82,7 +86,6 @@ select {
 
 // ie11 X removal
 input {
-
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

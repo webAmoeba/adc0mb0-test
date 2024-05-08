@@ -19,6 +19,12 @@
     background: url("../../img/svg/menu-btn.svg") no-repeat center;
     background-color: transparent;
     border: none;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   .header__wrapper {
@@ -36,14 +42,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+
     min-width: 40px;
     min-height: 40px;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
 
     &--premium {
       translate: 5px 0;
 
       span {
-        @include visually-hidden;
+        @include vp-767 {
+          @include visually-hidden;
+        }
       }
 
       svg {
@@ -51,6 +67,5 @@
         height: 18px;
       }
     }
-
   }
 }
