@@ -1,4 +1,5 @@
 .aside {
+  position: relative;
   z-index: 1;
 
   display: none;
@@ -16,6 +17,7 @@
     border: 2px solid rgba(149, 100, 170, 0.2);
     border-radius: 10px;
     transform: translate(-250px, 0);
+    cursor: pointer;
 
     transition: transform $trans-default;
   }
@@ -24,5 +26,11 @@
     position: static;
 
     transform: translate(0, 0);
+    cursor: default;
+  }
+
+  &--open {
+    transform: translate(0, 0);
+    cursor: default;
   }
 }

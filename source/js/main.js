@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeader} from './modules/header/init-header.js';
+import {mooveAside} from './modules/aside.js';
 
 // ---------------------------------
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initHeader();
+  mooveAside();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
