@@ -28,7 +28,7 @@ mixin header(headerMods, currentUrl)
           )
         ul.header__list
           li
-            a.header__link.header__link--user(href="#", data-close-menu) User
+            a.header__link.header__link--user(href="#", data-close-menu) User (instead sidebar)
           each link in headerLinks
             - const activeState = currentUrl === link.href
             li
@@ -38,4 +38,4 @@ mixin header(headerMods, currentUrl)
                 a.header__link(href=link.href, data-close-menu)= link.text
       a.header__link.header__link--premium(href="#", data-close-menu)
         span Premium
-        +icon('diamond', "20", "18")
+        +icon("diamond", "20", "18")
