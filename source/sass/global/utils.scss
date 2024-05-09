@@ -13,12 +13,25 @@
   }
 
   & > .container {
-    display: grid;
-    flex-grow: 1;
-    padding-top: 20px;
-    padding-bottom: 28px;
-    grid-template-columns: 270px 1fr;
-    gap: 30px;
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    @include vp-768 {
+      display: grid;
+      flex-grow: 1;
+      padding-top: 20px;
+      padding-bottom: 28px;
+      padding-left: 80px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    @include vp-1024 {
+      padding-left: 30px;
+      grid-template-columns: 270px 1fr;
+    }
 
     .aside {
       margin-top: 10px;

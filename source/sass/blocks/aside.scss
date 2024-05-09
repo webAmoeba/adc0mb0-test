@@ -1,5 +1,28 @@
 .aside {
-  background: rgba(149, 100, 170, 0.1);
-  border: 2px solid rgba(149, 100, 170, 0.2);
-  border-radius: 10px;
+  z-index: 1;
+
+  display: none;
+
+  @include vp-768 {
+    position: absolute;
+    top: 20px;
+    bottom: 28px;
+    left: 30px;
+
+    display: block;
+    width: 270px;
+
+    background: rgba(149, 100, 170, 0.1);
+    border: 2px solid rgba(149, 100, 170, 0.2);
+    border-radius: 10px;
+    transform: translate(-250px, 0);
+
+    transition: transform $trans-default;
+  }
+
+  @include vp-1024 {
+    position: static;
+
+    transform: translate(0, 0);
+  }
 }
