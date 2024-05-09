@@ -11,7 +11,7 @@ mixin header(headerMods, currentUrl)
       },
     ]
 
-  header.header(class=headerMods, data-header)
+  header.header(class=headerMods, data-header, data-scroll-lock-scrollable)
     .container
       button.header__toggle.btn-reset(type="button", aria-label="Меню", aria-pressed="false", data-burger)
         span.visually-hidden Меню

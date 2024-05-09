@@ -112,9 +112,10 @@
   // / / / / / / / / / / / / /   /   /     is-open
   &.is-open {
     height: 100dvh;
+    overflow-y: auto;
 
     .header__wrapper {
-      height: unset;
+      height: auto;
 
       visibility: visible;
     }
