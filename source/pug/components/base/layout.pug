@@ -43,7 +43,8 @@ html(lang="ru")
       if (hasHeader)
         +header(headerMods, currentUrl)
 
-      block main
+      if (hasMain)
+        +main(mainMods)
 
       if (hasFooter)
         +footer(footerMods)

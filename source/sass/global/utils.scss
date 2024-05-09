@@ -12,8 +12,17 @@
     flex-shrink: 0;
   }
 
-  main {
+  & > .container {
+    display: grid;
     flex-grow: 1;
+    padding-top: 20px;
+    padding-bottom: 28px;
+    grid-template-columns: 270px 1fr;
+    gap: 30px;
+
+    .aside {
+      margin-top: 10px;
+    }
   }
 }
 
