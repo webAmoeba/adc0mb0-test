@@ -53,13 +53,52 @@
   &--open {
     transform: translate(0, 0);
     cursor: default;
+
+    .aside__user .aside__arrow::before {
+      content: "⇦";
+    }
   }
 
   &__user {
+    position: relative;
+
     display: flex;
     gap: 12px;
 
     padding-bottom: 17px;
+
+    .aside__arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 40px;
+      height: 40px;
+
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.8;
+      }
+
+      &::before {
+        content: "⇨";
+        position: absolute;
+
+        font-size: 30px;
+        line-height: 12px;
+        text-align: right;
+        color: #9564aa;
+
+        cursor: pointer;
+
+        inset: 0;
+
+        @include vp-1024 {
+          display: none;
+        }
+      }
+    }
   }
 
   &__avatar {
