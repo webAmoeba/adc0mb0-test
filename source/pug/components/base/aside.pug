@@ -1,3 +1,15 @@
 mixin aside()
   aside.aside(data-aside)
-    div aside
+    .aside__user
+      .aside__avatar
+        +img(
+          "content/users",
+          "user1",
+          "png",
+          "50",
+          "50",
+          "Фото пользователя.",
+        )
+      .aside__user-info
+        .aside__username Test2412
+        a.aside__get-premium(href="#") get premium
