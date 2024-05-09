@@ -5,7 +5,6 @@
   display: none;
   padding: 14px;
 
-  line-height: normal;
 
   &::before,
   &::after {
@@ -60,7 +59,7 @@
     display: flex;
     gap: 12px;
 
-    padding-bottom: 22px;
+    padding-bottom: 17px;
   }
 
   &__avatar {
@@ -81,7 +80,6 @@
   }
 
   &__user-info {
-    // display: grid;
     display: flex;
     flex-direction: column;
     padding-top: 4px;
@@ -101,11 +99,41 @@
 
     background: #684677;
     border-radius: 5px;
+  }
 
-    transition: opacity $trans-default;
+  &__nav {
+    position: relative;
 
-    @include hover-focus {
-      opacity: 0.8;
+    padding-top: 22px;
+    padding-left: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 2px;
+      left: 2px;
+
+      height: 2px;
+
+      background: #9564aa;
+      opacity: 0.2;
     }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    gap: 23px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 }

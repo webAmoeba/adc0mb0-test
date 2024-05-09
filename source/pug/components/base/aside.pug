@@ -1,4 +1,56 @@
 mixin aside()
+  -
+    const links = [
+      {
+        link: "#",
+        text: "Profile",
+        icon: "user",
+        w: "22",
+        h: "22",
+      },
+      {
+        link: "#",
+        text: "My photos",
+        icon: "cam",
+        w: "22",
+        h: "18",
+      },
+      {
+        link: "#",
+        text: "Messages",
+        icon: "message",
+        w: "22",
+        h: "25",
+      },
+      {
+        link: "#",
+        text: "Favorites",
+        icon: "heart",
+        w: "22",
+        h: "20",
+      },
+      {
+        link: "#",
+        text: "Guests",
+        icon: "eye",
+        w: "22",
+        h: "16",
+      },
+      {
+        link: "#",
+        text: "Settings",
+        icon: "settings",
+        w: "22",
+        h: "22",
+      },
+      {
+        link: "#",
+        text: "Log out",
+        icon: "exit",
+        w: "22",
+        h: "20",
+      },
+    ]
   aside.aside(data-aside)
     .aside__user
       .aside__avatar
@@ -13,3 +65,10 @@ mixin aside()
       .aside__user-info
         .aside__username Test2412
         a.aside__get-premium(href="#") get premium
+    nav.aside__nav
+      ul.aside__list
+        each item in links
+          li
+            a.aside__link(href=item.link)
+              +icon(item.icon, item.w, item.h)
+              span!= item.text
