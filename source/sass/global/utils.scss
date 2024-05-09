@@ -16,12 +16,12 @@
     position: relative;
 
     display: block;
+    padding-bottom: 20px;
     overflow: hidden;
 
     @include vp-768 {
       display: grid;
       flex-grow: 1;
-      padding-top: 20px;
       padding-bottom: 28px;
       padding-left: 80px;
       grid-template-columns: 1fr;
@@ -34,7 +34,7 @@
     }
 
     .aside {
-      margin-top: 10px;
+      margin-top: 30px;
     }
   }
 }
