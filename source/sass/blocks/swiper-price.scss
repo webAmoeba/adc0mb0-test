@@ -114,15 +114,9 @@
   }
 
   &__btn-try {
-    padding: 18px;
-
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-
-    background: $color-yellow;
-    border: none;
-    border-radius: 10px;
+    @include vp-768 {
+      display: none;
+    }
   }
 
   &__checkbox {
