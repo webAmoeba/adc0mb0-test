@@ -26,7 +26,7 @@ mixin swiper-price()
         dollar: "100",
       },
     ]
-  .swiper-price.swiper(data-swiper-price)
+  form.swiper-price.swiper(action="https://echo.htmlacademy.ru/", method="get", data-swiper-price)
     .swiper-wrapper
       each slide in slides
         .swiper-slide
@@ -41,4 +41,8 @@ mixin swiper-price()
                 span.swiper-price__num $
                 span.swiper-price__num!= slide.dollar
             button.swiper-price__btn-buy
-    .swiper-pagination
+      .swiper-pagination
+    button.swiper-price__btn-try Try now
+    label.swiper-price__checkbox
+      input(type="checkbox", name="agree", checked)
+      span By clicking Checkbox you agree and accept our #[a(href="#") Privacy Policy], and #[a(href="#") Terms of use]
