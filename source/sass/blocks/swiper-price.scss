@@ -21,6 +21,10 @@
     background-color: $color-default-white;
   }
 
+  @include vp-768 {
+    max-width: 100%;
+  }
+
   .swiper-wrapper {
     z-index: 0;
 
