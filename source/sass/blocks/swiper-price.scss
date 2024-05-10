@@ -43,16 +43,25 @@
 
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 6px 30px;
     }
   }
 
   .swiper-slide {
     flex-grow: 1;
+    container-type: inline-size;
+    container-name: articlecard;
+
+    min-width: 150px;
   }
 
+  @container articlecard (min-width: 300px) {
+    .swiper-price__card {
+      background-color: red;
+    }
+  }
 
-  .swiper-slide article {
+  &__card {
     position: relative;
 
     margin-left: 20px;
@@ -60,6 +69,8 @@
 
     background: $color-violet;
     border-radius: 10px;
+    container-type: inline-size;
+    container-name: articlecard;
 
     @include vp-768 {
       display: flex;
@@ -72,8 +83,8 @@
 
       background: rgba(149, 100, 170, 0.1);
       border: 2px solid $color-violet;
-      container: article / inline-size;
     }
+
 
     @include hover-focus {
       background-color: $color-violet;
@@ -119,7 +130,6 @@
       margin-left: -3px;
 
       transform: translate(0, 0);
-
       visibility: hidden;
     }
   }
