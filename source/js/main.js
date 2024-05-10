@@ -5,10 +5,12 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeader} from './modules/header/init-header.js';
 import {mooveAside} from './modules/aside.js';
+import {initSwiperPrice} from './vendor/swiper-price.js';
 
-// ---------------------------------
+const swiperPrice = document.querySelector('[data-swiper-price]');
 
 window.addEventListener('DOMContentLoaded', () => {
+  initSwiperPrice(swiperPrice);
 
   // Utils
   // ---------------------------------

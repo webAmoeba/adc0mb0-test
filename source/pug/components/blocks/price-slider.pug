@@ -1,0 +1,44 @@
+mixin swiper-price()
+  -
+    const slides = [
+      {
+        cr: "50",
+        dollar: "5",
+      },
+      {
+        cr: "150",
+        dollar: "15",
+      },
+      {
+        cr: "300",
+        dollar: "30",
+      },
+      {
+        cr: "500",
+        dollar: "50",
+      },
+      {
+        cr: "1000",
+        dollar: "100",
+      },
+      {
+        cr: "1000",
+        dollar: "100",
+      },
+    ]
+  .swiper-price.swiper(data-swiper-price)
+    .swiper-wrapper
+      each slide in slides
+        .swiper-slide
+          article
+            span.swiper-price__offer One time offer!
+            .swiper-price__price
+              .swiper-price__cr
+                span.swiper-price__num!= slide.cr
+                span.swiper-price__cr-ico CR
+              span.swiper-price__slash /
+              .swiper-price__dollar
+                span.swiper-price__num $
+                span.swiper-price__num!= slide.dollar
+            button.swiper-price__btn-buy
+    .swiper-pagination
