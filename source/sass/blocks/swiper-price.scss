@@ -6,7 +6,16 @@
   padding-bottom: 16px;
   padding-left: 4px;
 
+  background-color: rgba(255, 0, 0, 0.1);
+
   gap: 15px;
+
+  @include vp-768 {
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 30px;
+    padding-left: 0;
+  }
 
   &::before {
     content: "";
@@ -19,16 +28,26 @@
     height: 100%;
 
     background-color: $color-default-white;
-  }
 
-  @include vp-768 {
-    max-width: 100%;
+    @include vp-768 {
+      display: none;
+    }
   }
 
   .swiper-wrapper {
     z-index: 0;
 
     padding-bottom: 34px;
+
+    @include vp-768 {
+      // /* stylelint-disable-next-line */
+      // transform: unset !important;
+
+      // display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 150px);
+      gap: 30px;
+    }
   }
 
 
@@ -47,6 +66,7 @@
     top: 50%;
     left: -20px;
 
+    margin: 0;
     padding: 4px 10px;
 
     font-size: 14px;

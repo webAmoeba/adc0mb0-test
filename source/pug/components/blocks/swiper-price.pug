@@ -27,11 +27,12 @@ mixin swiper-price()
       },
     ]
   form.swiper-price.swiper(action="https://echo.htmlacademy.ru/", method="get", data-swiper-price)
+    +discount()
     .swiper-wrapper
       each slide in slides
         .swiper-slide
           article
-            span.swiper-price__offer One time offer!
+            h2.swiper-price__offer One time offer!
             .swiper-price__price
               .swiper-price__cr
                 span.swiper-price__num!= slide.cr
