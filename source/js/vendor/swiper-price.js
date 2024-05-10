@@ -1,19 +1,23 @@
-const initSwiperPrice = (swiper) => {
-  if (swiper) {
-    new Swiper('[data-swiper-price]', {
-      direction: 'horizontal',
-      loop: false,
+const initSwiperPrice = () => {
+  const initSlider = () => {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      new Swiper('[data-swiper-price]', {
+        direction: 'horizontal',
+        loop: false,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        initialSlide: 0,
+        slidesPerView: 1,
+      });
+    }
+  };
 
-      pagination: {
-        el: '.swiper-pagination',
-      },
+  initSlider();
 
-
-      initialSlide: 0,
-
-      slidesPerView: 1,
-    });
-  }
+  window.addEventListener('resize', () => {
+    initSlider();
+  });
 };
 
 export {initSwiperPrice};

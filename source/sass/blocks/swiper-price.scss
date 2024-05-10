@@ -8,9 +8,25 @@
 
   gap: 15px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 4px;
+    height: 100%;
+
+    background-color: $color-default-white;
+  }
+
   .swiper-wrapper {
+    z-index: 0;
+
     padding-bottom: 34px;
   }
+
 
   .swiper-slide article {
     position: relative;
@@ -81,7 +97,20 @@
   }
 
   .swiper-pagination {
-    width: auto;
+    top: 82px;
+    bottom: unset;
+  }
+
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+
+    background-color: $color-yellow;
+    opacity: 1;
+
+    &-active {
+      background-color: $color-violet;
+    }
   }
 
   &__btn-try {
@@ -98,6 +127,7 @@
 
   &__checkbox {
     position: relative;
+    z-index: 1;
 
     padding-top: 2px;
     padding-left: 30px;
@@ -134,7 +164,7 @@
     }
 
     &:has(input[type="checkbox"]:checked)::before {
-      background: url("../../img/svg/bird.svg") no-repeat center;
+      background: url("../img/svg/bird.svg") no-repeat center;
       background-color: $color-violet;
     }
 
