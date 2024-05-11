@@ -33,18 +33,20 @@ mixin advantages()
       },
       {
         text: "Просматривать скрытые фото",
-        icon: "message",
+        //- icon: "message",
+        icon: "cam",
         w: "16",
         h: "16",
       },
     ]
   section.advantages
-    h2.visually-hidden Преимущества
-    +icon("diamond-big", "83", "70").advantages__center-icon
-    .advantages__list
-      each item in items
-        .advantages__item
-          .advantages__icon
-            +icon(item.icon, item.w, item.h)
-          span.advantages__text!= item.text
+    .advantages__wrapper
+      h2.visually-hidden Преимущества
+      +icon("diamond-big", "83", "70").advantages__center-icon
+      .advantages__list
+        each item in items
+          .advantages__item(data-advantage)
+            .advantages__icon(data-advantage-icon)
+              +icon(item.icon, item.w, item.h)
+            span.advantages__text!= item.text
 

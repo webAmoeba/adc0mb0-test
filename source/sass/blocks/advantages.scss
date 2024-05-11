@@ -1,21 +1,56 @@
 .advantages {
-  display: flex;
-  flex-direction: column;
-  padding-top: 14px;
+  padding: 14px 0;
 
   font-size: 12px;
   font-weight: 700;
   color: $color-violet;
-  gap: 12px;
+
+  @include vp-768 {
+    max-width: 306px;
+    margin: 0 auto;
+    padding-top: 5px;
+
+    translate: -16px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 12px;
+
+    flex-direction: column;
+
+    @include vp-768 {
+      position: relative;
+    }
+  }
 
   &__center-icon {
     align-self: center;
+
+    @include vp-768 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 131px;
+      height: 110px;
+
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @include vp-768 {
+      position: relative;
+
+      width: 100%;
+      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+    }
   }
 
   &__item {
@@ -24,6 +59,24 @@
 
     &:nth-child(n + 5) {
       display: none;
+
+      @include vp-768 {
+        display: block;
+      }
+    }
+
+    @include vp-768 {
+      position: absolute;
+      top: 50%;
+
+      display: flex;
+      justify-content: start;
+      align-items: stretch;
+      width: 50%;
+
+      transform: rotate(40deg);
+      transform-origin: 100% 50%;
+      translate: 0 -50%;
     }
   }
 
@@ -37,9 +90,25 @@
 
     background-color: rgba($color-violet, 0.1);
     border-radius: 50%;
+
+    @include vp-768 {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   &__text {
     align-self: center;
+
+    @include vp-768 {
+      display: none;
+
+      background-color: rgba(255, 0, 0, 0.1);
+    }
   }
 }

@@ -6,12 +6,11 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeader} from './modules/header/init-header.js';
 import {mooveAside} from './modules/aside.js';
 import {initSwiperPrice} from './vendor/swiper-price.js';
+import {arrangeAdvantages} from './modules/advantages.js';
 
 const swiperPrice = document.querySelector('[data-swiper-price]');
 
 window.addEventListener('DOMContentLoaded', () => {
-  initSwiperPrice(swiperPrice);
-
   // Utils
   // ---------------------------------
 
@@ -21,6 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initHeader();
   mooveAside();
+  initSwiperPrice(swiperPrice);
+  arrangeAdvantages();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
