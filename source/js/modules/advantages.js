@@ -3,6 +3,7 @@ const icons = document.querySelectorAll('[data-advantage-icon]');
 const howMany = elements.length;
 const lastIndex = elements.length - 1;
 const fullDegree = 360;
+const pixelPerfect = true;
 
 let minDegree = 0;
 let maxDegree = 360;
@@ -24,6 +25,20 @@ function arrangeAdvantages() {
         icons[index].style = `transform: rotate(${newDegree * -1}deg);`;
       }
     });
+
+    if (pixelPerfect) {
+      elements[2].style = 'transform: rotate(0deg);';
+      icons[2].style = 'transform: rotate(0deg);';
+
+      elements[0].style = 'transform: rotate(60deg);';
+      icons[0].style = 'transform: rotate(-60deg);';
+
+      elements[3].style = 'transform: rotate(120deg);';
+      icons[3].style = 'transform: rotate(-120deg);';
+
+      elements[1].style = 'transform: rotate(180deg);';
+      icons[1].style = 'transform: rotate(-180deg);';
+    }
   }
 }
 
