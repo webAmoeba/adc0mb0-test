@@ -45,7 +45,8 @@ mixin advantages()
       .advantages__list
         each item in items
           .advantages__item(data-advantage)
-            .advantages__icon(data-advantage-icon)
-              +icon(item.icon, item.w, item.h)
-            span.advantages__text!= item.text
+            .advantages__item-grid(data-advantage-icon)
+              .advantages__icon-wrapper
+                +icon(item.icon, item.w, item.h)
+              span.advantages__text(data-advantage-text)!= item.text
 
