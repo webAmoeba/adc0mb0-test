@@ -42,8 +42,6 @@
       flex-wrap: wrap;
       padding-bottom: 0;
       gap: 6px 30px;
-      /* stylelint-disable-next-line */
-      transform: unset !important;
     }
   }
 
@@ -213,6 +211,10 @@
   .swiper-pagination {
     top: 82px;
     bottom: unset;
+
+    @include vp-768 {
+      display: none;
+    }
   }
 
   .swiper-pagination-bullet {
@@ -247,7 +249,7 @@
     cursor: pointer;
 
     @include vp-768 {
-      margin-top: -20px;
+      margin-top: -4px;
 
       font-size: 13px;
     }
