@@ -26,7 +26,7 @@ function arrangeAdvantages() {
       }
     });
 
-    if (pixelPerfect) {
+    if (pixelPerfect && howMany === 6) {
       elements[2].style = 'transform: rotate(0deg);';
       icons[2].style = 'transform: rotate(0deg);';
 

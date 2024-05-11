@@ -92,6 +92,16 @@
       width: 50px;
       height: 50px;
     }
+
+    svg {
+      transition: fill $trans-default;
+      fill: $color-violet;
+
+      @include vp-768 {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 
   &__item-grid {
@@ -105,14 +115,13 @@
       align-items: center;
       width: 50px;
       height: 50px;
-
-      svg {
-        width: 24px;
-        height: 24px;
-      }
     }
 
     @include hover {
+      svg {
+        fill: $color-yellow;
+      }
+
       .advantages__text {
         overflow: visible;
 

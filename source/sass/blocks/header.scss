@@ -140,7 +140,7 @@
       justify-self: end;
 
       @include vp-768 {
-        background: #684677;
+        background: $color-violet-dark;
         border-radius: 10px;
         translate: 0 4px;
       }

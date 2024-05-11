@@ -108,7 +108,7 @@
     color: $color-default-white;
     text-transform: uppercase;
 
-    background: #684677;
+    background: $color-violet-dark;
     border-radius: 5px;
   }
 
@@ -146,5 +146,17 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    svg {
+      transition: fill $trans-default;
+      fill: $color-violet;
+    }
+
+    @include hover-focus {
+      svg {
+        opacity: 1;
+        fill: $color-yellow;
+      }
+    }
   }
 }
