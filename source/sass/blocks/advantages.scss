@@ -1,0 +1,45 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  padding-top: 14px;
+
+  font-size: 12px;
+  font-weight: 700;
+  color: $color-violet;
+  gap: 12px;
+
+  &__center-icon {
+    align-self: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 10px;
+
+    &:nth-child(n + 5) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    background-color: rgba($color-violet, 0.1);
+    border-radius: 50%;
+  }
+
+  &__text {
+    align-self: center;
+  }
+}

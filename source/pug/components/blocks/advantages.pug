@@ -1,0 +1,50 @@
+mixin advantages()
+  -
+    const items = [
+      {
+        text: "Отправлять сообщения",
+        icon: "message",
+        w: "16",
+        h: "16",
+      },
+      {
+        text: "Просматривать скрытые фото",
+        icon: "eye",
+        w: "16",
+        h: "16",
+      },
+      {
+        text: "Оплачивать подарки",
+        icon: "gift",
+        w: "16",
+        h: "16",
+      },
+      {
+        text: "Пользоваться другими премиум функциями",
+        icon: "heart",
+        w: "16",
+        h: "16",
+      },
+      {
+        text: "Просматривать скрытые фото",
+        icon: "settings",
+        w: "16",
+        h: "16",
+      },
+      {
+        text: "Просматривать скрытые фото",
+        icon: "message",
+        w: "16",
+        h: "16",
+      },
+    ]
+  section.advantages
+    h2.visually-hidden Преимущества
+    +icon("diamond-big", "83", "70").advantages__center-icon
+    .advantages__list
+      each item in items
+        .advantages__item
+          .advantages__icon
+            +icon(item.icon, item.w, item.h)
+          span.advantages__text!= item.text
+
