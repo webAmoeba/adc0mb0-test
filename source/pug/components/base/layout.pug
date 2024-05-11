@@ -40,6 +40,12 @@ html(lang="ru")
 
   body
     .wrapper(class=wrapperMods)
+      .wrapper__bubbles-left
+        +picture(
+          "content/bubbles",
+          "left-clear", "png", "619", "618", "Декоративные пузырьки."
+        )
+      .wrapper__bubbles-right
       if (hasHeader)
         +header(headerMods, currentUrl)
 

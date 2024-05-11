@@ -6,6 +6,7 @@
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
+  overflow: hidden;
 
   .header,
   .footer {
@@ -58,10 +59,49 @@
         transform: translate(0, 0);
         cursor: default;
 
+        &::before {
+          background-color: $color-default-white;
+
+          @include vp-768 {
+            background-color: transparent;
+          }
+        }
+
         .aside__user .aside__arrow::before {
           content: "⇦";
         }
       }
     }
+  }
+
+  &__bubbles-left,
+  &__bubbles-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: none;
+    width: 50%;
+    height: 100%;
+
+    pointer-events: none;
+
+    @include vp-768 {
+      display: block;
+    }
+
+    img {
+      position: absolute;
+      top: 226px;
+      right: 288px;
+
+      filter: blur(5px);
+    }
+  }
+
+  &__bubbles-right {
+    right: 0;
+    left: unset;
   }
 }

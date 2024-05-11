@@ -19,12 +19,12 @@
     inset: 0;
 
     border-radius: 10px;
+
+    transition: background-color $trans-default;
   }
 
   &::before {
     z-index: -2;
-
-    background-color: $color-default-white;
   }
 
   &::after {
