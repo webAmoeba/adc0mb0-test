@@ -1,6 +1,8 @@
 const initSwiperPrice = () => {
+  let isSwiperInitialized = false;
+
   const initSlider = () => {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    if (window.matchMedia('(max-width: 767px)').matches && !isSwiperInitialized) {
       new Swiper('[data-swiper-price]', {
         direction: 'horizontal',
         loop: false,
@@ -10,6 +12,7 @@ const initSwiperPrice = () => {
         initialSlide: 0,
         slidesPerView: 1,
       });
+      isSwiperInitialized = true;
     }
   };
 
