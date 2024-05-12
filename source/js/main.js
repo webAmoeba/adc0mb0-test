@@ -8,6 +8,7 @@ import {mooveAside} from './modules/aside.js';
 import {initSwiperPrice} from './vendor/swiper-price.js';
 import {arrangeAdvantages} from './modules/advantages.js';
 import {parallax} from './modules/parallax.js';
+import {startTimer} from './modules/timer.js';
 
 const swiperPrice = document.querySelector('[data-swiper-price]');
 
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSwiperPrice(swiperPrice);
   arrangeAdvantages();
   parallax();
+  startTimer();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

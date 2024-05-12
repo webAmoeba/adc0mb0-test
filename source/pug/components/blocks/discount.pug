@@ -3,7 +3,7 @@ mixin discount()
     h2.visually-hidden Скидка
     span.discount__discount Скидка #[span 40]%
     span.discount__valid Предложение действует в течение:
-    .discount__time
+    .discount__time(data-discount-timer)
       span.discount__hh(data-discount-hh) 00
-      span.discount__mm(data-discount-mm) 28
-      span.discount__ss(data-discount-ss) 12
+      span.discount__mm(data-discount-mm) 00
+      span.discount__ss(data-discount-ss) 00
