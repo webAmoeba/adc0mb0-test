@@ -1381,7 +1381,7 @@ button,
   height: 100%;
   pointer-events: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   .wrapper__bubbles-left, .wrapper__bubbles-right {
     display: block;
   }
