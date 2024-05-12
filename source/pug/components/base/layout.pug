@@ -43,9 +43,13 @@ html(lang="ru")
       .wrapper__bubbles-left
         +picture(
           "content/bubbles",
-          "left-clear", "png", "619", "618", "Декоративные пузырьки."
+          "bubble-l", "png", "619", "618", "Декоративные пузырьки."
         )
       .wrapper__bubbles-right
+        +picture(
+          "content/bubbles",
+          "bubble-r", "png", "597", "783", "Декоративные пузырьки."
+        )
       if (hasHeader)
         +header(headerMods, currentUrl)
 

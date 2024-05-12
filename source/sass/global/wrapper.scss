@@ -79,7 +79,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: -1;
 
     display: none;
     width: 50%;
@@ -93,8 +93,8 @@
 
     img {
       position: absolute;
-      top: 226px;
-      right: 288px;
+      top: 235px;
+      right: 296px;
 
       filter: blur(5px);
     }
@@ -103,5 +103,11 @@
   &__bubbles-right {
     right: 0;
     left: unset;
+
+    img {
+      top: 160px;
+      right: unset;
+      left: 364px;
+    }
   }
 }
