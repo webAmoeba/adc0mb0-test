@@ -1392,6 +1392,10 @@ button,
   right: 296px;
   -webkit-filter: blur(5px);
           filter: blur(5px);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .wrapper__bubbles-right {
   right: 0;
