@@ -1363,7 +1363,7 @@ button,
 .wrapper > .container .aside--open::before {
   background-color: #ffffff;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .wrapper > .container .aside--open::before {
     background-color: transparent;
   }
