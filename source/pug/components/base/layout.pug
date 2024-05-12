@@ -40,16 +40,16 @@ html(lang="ru")
 
   body
     .wrapper(class=wrapperMods)
-      .wrapper__bubbles-left
+      .wrapper__bubbles-left(data-parallax-wrapper)
         +picture(
           "content/bubbles",
           "bubble-l", "png", "619", "618", "Декоративные пузырьки."
-        )
-      .wrapper__bubbles-right
+        )(data-parallax-item)
+      .wrapper__bubbles-right(data-parallax-wrapper)
         +picture(
           "content/bubbles",
           "bubble-r", "png", "597", "783", "Декоративные пузырьки."
-        )
+        )(data-parallax-item)
       if (hasHeader)
         +header(headerMods, currentUrl)
 

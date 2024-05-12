@@ -97,6 +97,8 @@
       right: 296px;
 
       filter: blur(5px);
+
+      transition: transform $trans-default;
     }
   }
 
