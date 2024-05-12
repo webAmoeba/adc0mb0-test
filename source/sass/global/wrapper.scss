@@ -62,7 +62,7 @@
         &::before {
           background-color: $color-default-white;
 
-          @include vp-768 {
+          @include vp-1024 {
             background-color: transparent;
           }
         }
