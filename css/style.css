@@ -1314,14 +1314,12 @@ button,
 }
 @media (min-width: 768px) {
   .wrapper > .container {
-    display: -ms-grid;
     display: grid;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     padding-bottom: 28px;
     padding-left: 80px;
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -1329,7 +1327,6 @@ button,
 @media (min-width: 1024px) {
   .wrapper > .container {
     padding-left: 30px;
-    -ms-grid-columns: 270px 1fr;
     grid-template-columns: 270px 1fr;
   }
 }
@@ -1424,9 +1421,8 @@ button,
   }
 }
 .header .container {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "btn prem" "wrp wrp";
+  grid-template-areas: "btn prem" "wrp wrp";
 }
 @media (min-width: 768px) {
   .header .container {
@@ -1440,8 +1436,6 @@ button,
   }
 }
 .header .header__toggle {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   width: 40px;
   height: 40px;
   background: url("../img/svg/menu-btn.svg") no-repeat center;
@@ -1465,9 +1459,6 @@ button,
   opacity: 0.8;
 }
 .header .header__wrapper {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   height: 0;
   grid-area: wrp;
   visibility: hidden;
@@ -1562,17 +1553,12 @@ button,
   }
 }
 .header__link--premium {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   grid-area: prem;
   translate: 8px 0;
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
 @media (min-width: 768px) {
   .header__link--premium {
@@ -1597,6 +1583,8 @@ button,
   }
 }
 .header__link--premium svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 20px;
   height: 18px;
 }
@@ -1754,6 +1742,8 @@ button,
   gap: 30px;
 }
 .aside__link svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
   fill: #9564aa;
@@ -2345,27 +2335,21 @@ button,
 .input-upload--images-drop .input-upload__preview,
 .input-upload--file-drop .input-upload__preview {
   width: 100%;
-  display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   pointer-events: none;
 }
 
 .input-upload--images .input-upload__preview {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: (200px)[4];
   grid-template-columns: repeat(4, 200px);
 }
 
 .input-upload--file .input-upload__preview {
-  display: -ms-grid;
   display: grid;
   gap: 20px;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
 }
 
@@ -2446,9 +2430,7 @@ button,
 
 .input-upload__preview-file-info {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
   padding: 10px;
@@ -3102,7 +3084,6 @@ button,
 }
 .advantages__center-icon {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 @media (min-width: 768px) {
@@ -3235,7 +3216,6 @@ button,
 }
 .advantages__text {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
 }
 @media (min-width: 768px) {
