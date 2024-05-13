@@ -42,6 +42,8 @@
     background: $color-default-white;
     border-radius: 5px;
 
+    user-select: none;
+
     & > span:not(:first-child) {
       position: relative;
 

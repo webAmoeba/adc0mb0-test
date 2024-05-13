@@ -74,6 +74,8 @@
 
       background: rgba(149, 100, 170, 0.1);
       border: 2px solid $color-violet;
+
+      transition: background-color $trans-default, border-color $trans-default;
     }
 
 
