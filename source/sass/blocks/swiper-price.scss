@@ -79,7 +79,8 @@
     }
 
 
-    @include hover-focus {
+    &:hover,
+    &:focus-within {
       background-color: $color-violet;
       border-color: $color-violet;
 

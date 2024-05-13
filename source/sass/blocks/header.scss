@@ -11,6 +11,8 @@
   transition: height $trans-default;
 
   @include vp-768 {
+    display: flex;
+    align-items: center;
     height: auto;
     min-height: 100px;
   }
@@ -73,24 +75,33 @@
   &__logo {
     display: flex;
     flex-shrink: 0;
-    width: 68px;
-    height: 33px;
     margin-top: 20px;
+    padding: 6px;
 
     line-height: 0;
 
+    border-radius: 10px;
     visibility: hidden;
 
     transition:
       opacity $trans-default,
       visibility $trans-default;
 
+    img {
+      width: 68px;
+      height: 33px;
+      object-fit: contain;
+    }
+
     @include vp-768 {
-      display: flex;
-      width: 114px;
-      height: 55px;
+      margin-top: 0;
 
       visibility: visible;
+
+      img {
+        width: 109px;
+        height: 44px;
+      }
     }
   }
 
@@ -115,7 +126,10 @@
     align-items: center;
     min-width: 40px;
     min-height: 40px;
+    margin-bottom: 14px;
     padding: 6px 13px;
+
+    border-radius: 10px;
 
     gap: 10px;
 
@@ -140,7 +154,6 @@
 
       @include vp-768 {
         background: $color-violet-dark;
-        border-radius: 10px;
         translate: 0 4px;
       }
 

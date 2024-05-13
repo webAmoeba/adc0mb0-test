@@ -60,4 +60,3 @@ window.addEventListener('resize', handleResize);
 handleResize();
 
 export {arrangeAdvantages};
-

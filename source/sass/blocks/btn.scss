@@ -25,4 +25,9 @@
   @include hover-focus {
     opacity: 0.8;
   }
+
+  &:focus-visible {
+    outline: 1px solid $color-yellow;
+    outline-offset: 1px;
+  }
 }
