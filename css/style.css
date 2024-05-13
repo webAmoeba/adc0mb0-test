@@ -1132,17 +1132,16 @@ a {
 }
 @media (hover: hover) {
   a:hover:not(.focus-visible) {
-    outline: none;
-    -webkit-box-shadow: 0 0 1px 2px #ffcf2d, 0 0 2px 4px #684677;
-            box-shadow: 0 0 1px 2px #ffcf2d, 0 0 2px 4px #684677;
     opacity: 0.8;
   }
 }
 a.focus-visible:focus {
+  opacity: 0.8;
+}
+a:focus-visible {
   outline: none;
   -webkit-box-shadow: 0 0 1px 2px #ffcf2d, 0 0 2px 4px #684677;
           box-shadow: 0 0 1px 2px #ffcf2d, 0 0 2px 4px #684677;
-  opacity: 0.8;
 }
 
 button {
