@@ -1786,6 +1786,10 @@ button,
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn:disabled {
   opacity: 0.5;
@@ -2741,6 +2745,8 @@ button,
     gap: 12px;
     background: rgba(149, 100, 170, 0.1);
     border: 2px solid #9564aa;
+    -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 }
 @media (hover: hover) {
@@ -3052,6 +3058,10 @@ button,
   color: #000000;
   background: #ffffff;
   border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .discount__time > span:not(:first-child) {
   position: relative;
