@@ -148,6 +148,8 @@
     gap: 30px;
 
     svg {
+      flex-shrink: 0;
+
       transition: fill $trans-default;
       fill: $color-violet;
     }

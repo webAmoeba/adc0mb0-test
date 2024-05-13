@@ -131,7 +131,6 @@
     }
 
     &--premium {
-      flex-shrink: 0;
       justify-content: center;
 
       grid-area: prem;
@@ -152,6 +151,7 @@
       }
 
       svg {
+        flex-shrink: 0;
         width: 20px;
         height: 18px;
       }
